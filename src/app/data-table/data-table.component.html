@@ -1,0 +1,81 @@
+
+<h1 class = "header">League Table</h1>
+
+  <table mat-table class="full-width-table" mat-table [dataSource]="dataSource" matSort aria-label="Elements">
+
+    <ng-container matColumnDef="clubName">
+      <th class="w-25" mat-header-cell *matHeaderCellDef>Club Name</th>
+      <td mat-cell *matCellDef="let row">{{row.clubName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="clubLocation">
+      <th mat-header-cell *matHeaderCellDef>Club Location</th>
+      <td mat-cell *matCellDef="let row">{{row.clubLocation}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="wins">
+      <th mat-header-cell *matHeaderCellDef >W</th>
+      <td mat-cell *matCellDef="let row">{{row.wins}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="draws">
+      <th mat-header-cell *matHeaderCellDef>D</th>
+      <td mat-cell *matCellDef="let row">{{row.draws}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="defeats">
+      <th mat-header-cell *matHeaderCellDef>L</th>
+      <td mat-cell *matCellDef="let row">{{row.defeats}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="matchPlayed">
+      <th mat-header-cell *matHeaderCellDef>PLd / MP</th>
+      <td mat-cell *matCellDef="let row">{{row.matchPlayed}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="goalsReceived">
+      <th mat-header-cell *matHeaderCellDef>GA</th>
+      <td mat-cell *matCellDef="let row">{{row.goalsReceived}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="score">
+      <th mat-header-cell *matHeaderCellDef>GF / GS</th>
+      <td mat-cell *matCellDef="let row">{{row.score}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="points">
+      <th mat-header-cell *matHeaderCellDef>Pts</th>
+      <td mat-cell *matCellDef="let row">{{row.points}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Remove Club </th>
+      <td mat-cell *matCellDef="let row"> <button mat-raised-button color="basic" (click)="deleteclub(row.clubName)">Remove</button> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  </table>
+
+  <mat-paginator class="paginator"
+      [length]="dataSource?.data?.length"
+      [pageIndex]="0"
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 10]">
+  </mat-paginator>
+
+
+  <section>
+  <ul class="menu cf">
+    <li>
+    <a href="http://localhost:4200/leagueTable">Sorting</a>
+    <ul class="submenu">
+      <li><button class="button" mat-raised-button type="submit" (click)="getPlData()" >Sort By Points</button></li>
+      <li><button class="button" mat-raised-button type="submit" (click)="sortWins()">Sort By Wins</button></li>
+      <li><button class="button" mat-raised-button type="submit" (click)="sortScore()">Sort By Score</button></li>
+    </ul>
+  </li>
+  </ul>
+</section>

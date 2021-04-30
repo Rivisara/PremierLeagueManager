@@ -1,0 +1,102 @@
+.r-link{
+    display: var(--rLinkDisplay, inline-flex) !important;
+  }
+
+  .r-link[href]{
+    color: var(--rLinkColor) !important;
+    text-decoration: var(--rLinkTextDecoration, none) !important;
+  }
+
+  .r-list{
+    padding-left: var(--rListPaddingLeft, 0) !important;
+    margin-top: var(--rListMarginTop, 0) !important;
+    margin-bottom: var(--rListMarginBottom, 0) !important;
+    list-style: var(--rListListStyle, none) !important;
+
+  }
+
+  .menu{
+    --rLinkColor: var(--menuLinkColor, currentColor);
+
+  }
+
+  .menu:hover .menu__link:not(:hover){
+    --rLinkColor: var(--menuLinkColorUnactive, rgba(63, 63, 63, 0.541));
+  }
+
+  .menu{
+
+    background-color:rgba($color: #ffffff, $alpha: 0.6);
+    box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+  }
+
+  .menu__list{
+    display: flex;
+  }
+
+  .menu__link{
+    padding: var(--menuLinkPadding, 1rem 5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+  }
+
+
+  .text-underlined{
+    position: relative;
+    overflow: hidden;
+
+    will-change: color;
+    transition: color .25s ease-out;
+  }
+
+  .text-underlined::before,
+  .text-underlined::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--textUnderlinedLineColor, currentColor);
+
+    will-change: width;
+    transition: width .1s ease-out;
+
+    position: absolute;
+    bottom: 0;
+  }
+
+  .text-underlined::before{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .text-underlined::after{
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .text-underlined:hover::before,
+  .text-underlined:hover::after{
+    width: 100%;
+    transition-duration: .2s;
+  }
+
+
+  body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page{
+    box-sizing: content-box;
+    max-width: 1300px;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    margin: auto;
+  }
+
+  .page__menu:nth-child(n+2){
+    margin-top: 5rem;
+  }
+

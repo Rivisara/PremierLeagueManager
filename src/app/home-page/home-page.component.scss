@@ -1,0 +1,139 @@
+.header{
+  text-align: center;
+  font-size: 65px;
+  font-family: "Roboto Slab";
+  color: #fcfcff;
+  outline-color: black;
+
+}
+
+section {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.icon-wrapper {
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  padding: 1.5em;
+  margin: 5em auto;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.cls-1,
+.cls-2,
+.cls-3 {
+  fill: transparent;
+  stroke: #fff;
+}
+
+.cls-1 {
+  stroke-miterlimit: 22.93;
+  stroke-width: 2px;
+}
+
+.cls-2,
+.cls-3 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cls-2 {
+  stroke-width: 2px;
+}
+
+.cls-3 {
+  stroke-width: 2px;
+}
+
+.icon-wrapper #air {
+  stroke-dashoffset: 66;
+  stroke-dasharray: 33;
+  transition: all 2s ease;
+}
+
+.icon-wrapper:hover #air {
+  stroke-dashoffset: 0;
+}
+
+.icon-wrapper #ball {
+  transition: all 1.5s ease;
+  transform: rotate(0);
+  transform-origin: center;
+}
+
+.icon-wrapper:hover #ball {
+  transform: rotate(360deg);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 45%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 45px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 80%;
+}
+.btn:hover {
+  text-decoration: none;
+}
+
+.effect04 {
+  --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+  display: var(--uismLinkDisplay);
+  color: #000;
+  position: relative;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+.effect04::before,
+.effect04 span{
+  margin: 0 auto;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: 0.4s;
+}
+
+.effect04:hover{
+  background-color: #000;
+}
+
+.effect04:hover span{
+  -webkit-transform: translateY(-400%) scale(-0.1,20);
+  transform: translateY(-400%) scale(-0.1,20);
+}
+
+.effect04::before{
+  content: attr(data-sm-link-text);
+  color: #FFF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(500%) scale(-0.1,20);
+  transform: translateY(500%) scale(-0.1,20);
+}
+
+.effect04:hover::before{
+  letter-spacing: 0.05em;
+  -webkit-transform: translateY(0) scale(1,1);
+  transform: translateY(0) scale(1,1);
+}
+

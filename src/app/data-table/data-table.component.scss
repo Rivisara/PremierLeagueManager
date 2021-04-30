@@ -1,0 +1,161 @@
+.full-width-table {
+  width: 90%;
+  table-layout: fixed;
+  padding: 0%;
+  margin: 10px auto;
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+}
+
+.paginator{
+  width: 90%;
+  background-color: rgba($color: #ffffff, $alpha: 0.4);
+  margin: 5px auto;
+  padding: 0%;
+}
+
+
+.full-width-table-header {
+  width: 80%;
+  table-layout: fixed;
+  padding: 0%;
+  margin: 10px auto;
+  overflow:scroll;
+
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: transparent;
+  color: white;
+  font-size: 70px;
+  font-family:'Staatliches';
+}
+
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu {
+  outline-color: transparent;
+  margin: 25px auto;
+  width: 175px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 20%;
+}
+
+.menu > li {
+  background:rgba($color: #ffffff, $alpha: 0.4);
+  float: left;
+  position: relative;
+}
+
+.menu a {
+
+  display: block;
+  color:black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}
+
+.menu li:hover {
+  background-color: rgba($color: #ffffff, $alpha: 0.4);
+}
+
+.menu > li > a {
+  padding: 1em 2em;
+  height: 45px;
+
+}
+
+.submenu {
+  position: absolute;
+  width: 175px;
+  left: 58%; margin-left: -100px;
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color:rgba($color: #ffffff, $alpha: 0.1);
+  position: relative;
+  overflow: hidden;
+  outline-style: solid;
+}
+
+.submenu > li > a {
+  padding: 1em 2em;
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+}
+
+
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu li {
+  transition: .5s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+section {
+    text-align: center;
+  }
+
+  .button {
+    background: transparent;
+    outline: transparent;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+    border: transparent;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+

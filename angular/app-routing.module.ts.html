@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>app-routing.module.ts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+app-routing.module.ts</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">{ NgModule } from </span><span class="s2">'@angular/core'</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">{ Routes</span><span class="s0">, </span><span class="s1">RouterModule } from </span><span class="s2">'@angular/router'</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">{ AddMatchComponent } from </span><span class="s2">'./add-match/add-match.component'</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">{ DataTableComponent } from </span><span class="s2">'./data-table/data-table.component'</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">{ HomeComponent } from </span><span class="s2">'./find/home.component'</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">{ LeagueClubsComponent } from </span><span class="s2">'./league-clubs/league-clubs.component'</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">{ MatchTableComponent } from </span><span class="s2">'./match-table/match-table.component'</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">{HomePageComponent} from </span><span class="s2">'./home-page/home-page.component'</span><span class="s0">;</span>
+
+<span class="s0">const </span><span class="s1">routes: Routes = [</span>
+  <span class="s1">{ path: </span><span class="s2">'AddClubs' </span><span class="s0">, </span><span class="s1">component: LeagueClubsComponent}</span><span class="s0">,</span>
+  <span class="s1">{ path: </span><span class="s2">'leagueTable' </span><span class="s0">, </span><span class="s1">component: DataTableComponent}</span><span class="s0">,</span>
+  <span class="s1">{ path: </span><span class="s2">'matchTable' </span><span class="s0">, </span><span class="s1">component: MatchTableComponent}</span><span class="s0">,</span>
+  <span class="s1">{ path: </span><span class="s2">'find' </span><span class="s0">, </span><span class="s1">component: HomeComponent}</span><span class="s0">,</span>
+  <span class="s1">{ path: </span><span class="s2">'addmatch' </span><span class="s0">, </span><span class="s1">component: AddMatchComponent}</span><span class="s0">,</span>
+  <span class="s1">{ path: </span><span class="s2">'homepage' </span><span class="s0">, </span><span class="s1">component: HomePageComponent}</span><span class="s0">,</span>
+  <span class="s1">{ path: </span><span class="s2">'**'</span><span class="s0">, </span><span class="s1">component: HomePageComponent }</span>
+<span class="s1">]</span><span class="s0">;</span>
+
+<span class="s1">@NgModule({</span>
+  <span class="s1">imports: [RouterModule.forRoot(routes)]</span><span class="s0">,</span>
+  <span class="s1">exports: [RouterModule]</span>
+<span class="s1">})</span>
+<span class="s0">export class </span><span class="s1">AppRoutingModule { }</span>
+<span class="s0">export const </span><span class="s1">RoutingComponents = [ LeagueClubsComponent</span><span class="s0">,</span><span class="s1">DataTableComponent</span><span class="s0">,</span><span class="s1">HomeComponent</span><span class="s0">,</span><span class="s1">MatchTableComponent</span><span class="s0">,</span><span class="s1">HomeComponent</span><span class="s0">,</span><span class="s1">AddMatchComponent</span><span class="s0">,</span><span class="s1">HomePageComponent]</span>
+</pre>
+</body>
+</html>
